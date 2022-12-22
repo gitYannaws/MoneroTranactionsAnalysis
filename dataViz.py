@@ -1,31 +1,15 @@
-import seaborn
+import seaborn as sns
 import pandas
 import matplotlib.pyplot as plt
+# what time is less/empty blocks are happening?
 
-# res = seaborn.violinplot(x=csv['Age'])
-# csv = pandas.read_csv('moneroDataCleaned.csv')
-# res = seaborn.lineplot(y="num_txes", x="date", data=csv)
-# res = seaborn.violinplot(x=csv['num_txes'])
-# res = seaborn.histplot(data=csv, x="num_txes")
-# plt.show()
+df = pandas.read_csv('moneroDataCleaned.csv')
 
+# res = seaborn.lineplot(y="num_txes", x="date", data=df)
+res = sns.histplot(data=df, x="datehour")
+# ax = seaborn.violinplot(y=df['num_txes'], data=df)
 
-import matplotlib.pyplot as plt
-import datetime
-
-# Data to plot
-x = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5']
-y = [1, 5, 9, 4, 12]
-
-# Create the scatter plot
-plt.scatter(x, y, s=100, c='red', marker='^')
-
-# Add labels and a title
-plt.xlabel('Date')
-plt.ylabel('Value')
-plt.title('Scatter plot example')
-
-# Show the plot
 plt.show()
+
 
 
